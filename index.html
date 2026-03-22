@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#214d86" />
+  <meta name="theme-color" content="#0f5cc0" />
   <title>LIPA</title>
-  <meta name="description" content="LIPA – stolice, barske stolice, enterijer i materijali." />
+  <meta name="description" content="LIPA – stolice, barske stolice, separei, stolovi, enterijer i materijali." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,18 @@
 
   <style>
     :root{
-      --bg:#0d2340;
-      --bg2:#173b68;
-      --panel:rgba(8,18,34,.66);
-      --panel-strong:rgba(7,16,30,.82);
-      --line:rgba(255,255,255,.12);
-      --text:#f4f8ff;
-      --muted:#c9d8eb;
-      --accent:#7fb6ff;
-      --accent2:#b6d7ff;
-      --shadow:0 18px 45px rgba(0,0,0,.35);
+      --bg:#031b4e;
+      --bg2:#083b9a;
+      --bg3:#0f5cc0;
+      --bg4:#2f7de1;
+      --panel:rgba(5,22,60,.58);
+      --panel-strong:rgba(3,16,44,.82);
+      --line:rgba(255,255,255,.14);
+      --text:#f3f8ff;
+      --muted:#d2e3ff;
+      --accent:#72b0ff;
+      --accent2:#c8e0ff;
+      --shadow:0 18px 45px rgba(0,0,0,.34);
       --radius:22px;
       --radius-sm:16px;
       --wrap:1240px;
@@ -35,8 +37,10 @@
       font-family:'Inter',system-ui,sans-serif;
       color:var(--text);
       background:
-        linear-gradient(rgba(7,17,31,.62),rgba(7,17,31,.72)),
-        url('assets/hero.jpg') center center / cover fixed no-repeat;
+        radial-gradient(circle at top left, rgba(111,175,255,.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(35,118,255,.18), transparent 28%),
+        radial-gradient(circle at bottom center, rgba(140,200,255,.12), transparent 25%),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg2) 34%, var(--bg3) 68%, var(--bg4) 100%);
       min-height:100vh;
     }
 
@@ -45,9 +49,7 @@
       position:fixed;
       inset:0;
       background:
-        radial-gradient(circle at top left, rgba(127,182,255,.14), transparent 32%),
-        radial-gradient(circle at top right, rgba(84,143,217,.16), transparent 30%),
-        radial-gradient(circle at bottom center, rgba(255,255,255,.05), transparent 26%);
+        linear-gradient(rgba(1,8,26,.16), rgba(1,8,26,.24));
       pointer-events:none;
       z-index:-1;
     }
@@ -69,7 +71,7 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(6,14,26,.62);
+      background:rgba(2,14,40,.58);
       backdrop-filter:blur(16px);
       -webkit-backdrop-filter:blur(16px);
       border-bottom:1px solid rgba(255,255,255,.10);
@@ -95,9 +97,9 @@
       height:62px;
       object-fit:contain;
       border-radius:14px;
-      background:rgba(255,255,255,.06);
+      background:rgba(255,255,255,.08);
       padding:6px;
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
     }
 
     .brand-text{
@@ -136,7 +138,7 @@
     }
 
     .menu a:hover{
-      background:rgba(255,255,255,.08);
+      background:rgba(255,255,255,.09);
       border-color:rgba(255,255,255,.14);
       transform:translateY(-1px);
     }
@@ -148,10 +150,10 @@
     .hero-card{
       overflow:hidden;
       border-radius:28px;
-      border:1px solid rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.14);
       box-shadow:var(--shadow);
       background:
-        linear-gradient(rgba(5,14,28,.38),rgba(5,14,28,.72)),
+        linear-gradient(rgba(2,18,52,.34),rgba(2,18,52,.68)),
         url('assets/hero.jpg') center center / cover no-repeat;
     }
 
@@ -197,9 +199,9 @@
     }
 
     .lead{
-      max-width:640px;
-      margin:0 0 0;
-      color:#e6effb;
+      max-width:700px;
+      margin:0;
+      color:#ecf5ff;
       font-size:clamp(1rem,1.4vw,1.14rem);
       line-height:1.7;
     }
@@ -215,7 +217,7 @@
       max-width:340px;
       padding:18px;
       border-radius:26px;
-      background:rgba(9,19,35,.62);
+      background:rgba(6,24,62,.56);
       border:1px solid rgba(255,255,255,.12);
       backdrop-filter:blur(16px);
       -webkit-backdrop-filter:blur(16px);
@@ -241,8 +243,8 @@
       gap:12px;
       padding:16px 18px;
       border-radius:18px;
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.11);
       font-weight:700;
       transition:.22s ease;
     }
@@ -254,8 +256,8 @@
 
     .quick-links a:hover{
       transform:translateX(4px);
-      background:rgba(127,182,255,.16);
-      border-color:rgba(127,182,255,.28);
+      background:rgba(114,176,255,.18);
+      border-color:rgba(114,176,255,.28);
     }
 
     section{
@@ -279,7 +281,7 @@
     .section-head p{
       margin:8px 0 0;
       color:var(--muted);
-      max-width:820px;
+      max-width:980px;
       line-height:1.7;
     }
 
@@ -327,14 +329,14 @@
     .product-card:hover{
       transform:translateY(-4px);
       box-shadow:0 24px 50px rgba(0,0,0,.34);
-      border-color:rgba(127,182,255,.28);
+      border-color:rgba(114,176,255,.28);
     }
 
     .media{
       aspect-ratio:4/4.35;
       background:
-        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)),
-        rgba(255,255,255,.035);
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015)),
+        rgba(255,255,255,.03);
       border-bottom:1px solid rgba(255,255,255,.08);
       overflow:hidden;
     }
@@ -431,14 +433,40 @@
     }
 
     .material-card.active{
-      border-color:rgba(127,182,255,.34);
-      box-shadow:0 0 0 1px rgba(127,182,255,.22), 0 24px 50px rgba(0,0,0,.34);
+      border-color:rgba(114,176,255,.34);
+      box-shadow:0 0 0 1px rgba(114,176,255,.22), 0 24px 50px rgba(0,0,0,.34);
     }
 
     .material-card.active .checkmark{
-      background:rgba(127,182,255,.20);
-      border-color:rgba(127,182,255,.38);
+      background:rgba(114,176,255,.20);
+      border-color:rgba(114,176,255,.38);
       color:var(--accent2);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .contact-box{
+      padding:22px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+    }
+
+    .contact-box h3{
+      margin:0 0 12px;
+      font-size:1.06rem;
+    }
+
+    .contact-box p,
+    .contact-box a{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      word-break:break-word;
     }
 
     footer{
@@ -474,8 +502,8 @@
     }
 
     .to-top:hover{
-      background:rgba(127,182,255,.16);
-      border-color:rgba(127,182,255,.28);
+      background:rgba(114,176,255,.16);
+      border-color:rgba(114,176,255,.28);
     }
 
     @media (max-width:1100px){
@@ -486,7 +514,8 @@
       .hero-right{justify-content:flex-start}
       .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
       .materials{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .about-grid{grid-template-columns:1fr}
+      .about-grid,
+      .contact-grid{grid-template-columns:1fr}
     }
 
     @media (max-width:760px){
@@ -538,16 +567,19 @@
         <img src="assets/logo.png" alt="LIPA logo">
         <div class="brand-text">
           <strong>LIPA</strong>
-          <span>Stolice • Barske stolice • Enterijer • Materijali</span>
+          <span>Stolice • Barske stolice • Separei • Stolovi • Enterijer • Materijali</span>
         </div>
       </a>
 
       <nav class="menu" aria-label="Glavna navigacija">
         <a href="#stolice">Stolice</a>
         <a href="#barske">Barske</a>
+        <a href="#separei">Separei</a>
+        <a href="#stolovi">Stolovi</a>
         <a href="#enterijer">Enterijer</a>
         <a href="#materijali">Materijali</a>
         <a href="#onama">O nama</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -559,10 +591,10 @@
           <div class="hero-inner">
             <div class="hero-left">
               <div class="eyebrow">Luksuzan izbor nameštaja</div>
-              <h1>Elegantne stolice i pažljivo birani materijali za savremen enterijer.</h1>
+              <h1>Elegantne stolice, stolovi i pažljivo birani materijali za savremen enterijer.</h1>
               <p class="lead">
-                Dobro došli u LIPA kolekciju. Ovde možete predstaviti svoje modele stolica, barskih stolica,
-                inspiraciju za enterijer i izbor materijala, uz premium izgled sajta sa plavom podlogom,
+                Dobro došli u LIPA kolekciju. Ovde možete predstaviti modele stolica, barskih i polubarskih stolica,
+                separea, stolova, enterijerskih rešenja i izbora materijala uz premium izgled sajta sa više nijansi plave,
                 staklenim panelima i velikim vizualima.
               </p>
             </div>
@@ -572,10 +604,12 @@
                 <h2>Kategorije</h2>
                 <div class="quick-links">
                   <a href="#stolice"><span>Stolice</span><span>→</span></a>
-                  <a href="#barske"><span>Barske stolice</span><span>→</span></a>
+                  <a href="#barske"><span>Barske i polubarske stolice</span><span>→</span></a>
+                  <a href="#separei"><span>Separei</span><span>→</span></a>
+                  <a href="#stolovi"><span>Stolovi</span><span>→</span></a>
                   <a href="#enterijer"><span>Enterijer</span><span>→</span></a>
                   <a href="#materijali"><span>Materijali</span><span>→</span></a>
-                  <a href="#onama"><span>O nama</span><span>→</span></a>
+                  <a href="#kontakt"><span>Kontakt</span><span>→</span></a>
                 </div>
               </div>
             </div>
@@ -590,8 +624,11 @@
           <div>
             <h2>O nama</h2>
             <p>
-              Ovaj deo je predviđen za vaš uvodni tekst o brendu, kvalitetu izrade, pažnji prema detaljima
-              i načinu na koji birate forme, udobnost i završne materijale.
+              Naša firma posluje od 1.6.2005. godine na tržištu Srbije, ali i na tržištima drugih evropskih zemalja.
+              Prepoznatljivi smo po proizvodnji stolica, ali naš spektar proizvoda je širok: stolice, stolovi, separei,
+              kreveti, šankovi, gazišta, klupe, taburei, jastuci, sedalice i drugi proizvodi su sastavni deo našeg asortimana.
+              Bavimo se opremanjem poslovnih i stambenih prostora. Naša proizvodnja je zaokružena od sušenja masiva drveta,
+              preko stolarske radionice, lakirnice i tapetarije, sve do skladištenja i transporta gotovih proizvoda.
             </p>
           </div>
         </div>
@@ -599,17 +636,17 @@
         <div class="about-card glass">
           <div class="about-grid">
             <div class="about-box">
-              <h3>Kvalitet i estetika</h3>
+              <h3>Kvalitet i izrada</h3>
               <p>
-                Ovde unesite tekst o kvalitetnim materijalima, preciznoj izradi i dizajnu koji lako nalazi
-                mesto u modernim i klasičnim enterijerima.
+                Proizvodni proces obuhvata kompletan put od obrade masiva drveta do finalne tapetarske i završne obrade,
+                uz pažnju prema detaljima, trajnosti i estetici svakog proizvoda.
               </p>
             </div>
             <div class="about-box">
-              <h3>Prilagodljiv izbor</h3>
+              <h3>Opremljanje prostora</h3>
               <p>
-                Ovde unesite tekst o dostupnim dezenima, bojama, završnim obradama i mogućnostima izbora
-                modela za različite prostore i stilove uređenja.
+                Bavimo se opremanjem poslovnih i stambenih prostora, uz širok izbor modela, dimenzija, boja i materijala
+                prilagođenih različitim stilovima enterijera i potrebama klijenata.
               </p>
             </div>
           </div>
@@ -622,7 +659,10 @@
         <div class="section-head">
           <div>
             <h2>Stolice</h2>
-            <p>Pripremljeno je 11 mesta za slike i opise modela stolica.</p>
+            <p>
+              Sve naše stolice proizvode se od masiva bukve, hrasta ili jasena.
+              Na Vama je izbor boje drveta i boje mebla/pliša.
+            </p>
           </div>
         </div>
 
@@ -722,8 +762,12 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Barske stolice</h2>
-            <p>Pripremljeno je 11 mesta za slike i opise barskih stolica.</p>
+            <h2>Barske i polubarske stolice</h2>
+            <p>
+              Naše barske i polubarske stolice su spoj masiva drveta i plastificiranog metala.
+              Vi birate visine sedenja koje odgovaraju Vašem šanku ili kuhinjskom ostrvu, takođe birate
+              boje drveta, boje mebla/pliša i boje nogostopa.
+            </p>
           </div>
         </div>
 
@@ -815,6 +859,73 @@
               <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="separei">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Separei</h2>
+            <p>
+              Na Vama je izbor svih dimenzija, boja i ukrasa mebla/pliša, poput čestera ili pruga.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card glass">
+          <div class="about-grid">
+            <div class="about-box">
+              <h3>Izrada po meri</h3>
+              <p>
+                Separei se izrađuju prema potrebama prostora, uz mogućnost odabira dimenzija, dubine,
+                visine i svih detalja završne obrade.
+              </p>
+            </div>
+            <div class="about-box">
+              <h3>Boje i ukrasi</h3>
+              <p>
+                Birate boje i vrste mebla ili pliša, kao i dekorativne detalje poput čestera, pruga
+                i drugih ukrasnih elemenata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stolovi">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Stolovi</h2>
+            <p>
+              Na Vama je izbor svih dimnezija i oblika stolova. Materijali koji se koriste za ploče stolova mogu biti
+              masivi drveta, poput bukve, hrasta, jasena ili oraha, kompakt ploče, medijapani, oplemenjene iverice
+              i mnoge imitacije, poput imitacije mermera. Nogari ili konstrukcije mogu biti od masiva drveta ili od
+              plastificiranog metala, a sve boje ploče i nogara/konstrukcije birate Vi.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card glass">
+          <div class="about-grid">
+            <div class="about-box">
+              <h3>Ploče stolova</h3>
+              <p>
+                U ponudi su masivi drveta, kompakt ploče, medijapani, oplemenjene iverice i različite imitacije,
+                uključujući i imitaciju mermera.
+              </p>
+            </div>
+            <div class="about-box">
+              <h3>Nogari i konstrukcije</h3>
+              <p>
+                Konstrukcije mogu biti od masiva drveta ili plastificiranog metala, uz izbor boja ploče i nogara
+                prema Vašem prostoru i željenom stilu.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -927,6 +1038,50 @@
             </div>
             <div class="checkmark">✓</div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Kontakt</h2>
+            <p>Za informacije, porudžbine i dogovor oko izrade po meri kontaktirajte nas.</p>
+          </div>
+        </div>
+
+        <div class="about-card glass">
+          <div class="contact-grid">
+            <div class="contact-box">
+              <h3>Telefon</h3>
+              <p>
+                <a href="tel:+381612695784">+381 612695784</a><br>
+                <a href="tel:+381604806777">+381 604806777</a>
+              </p>
+            </div>
+
+            <div class="contact-box">
+              <h3>Instagram</h3>
+              <p>
+                <a href="https://www.instagram.com/lipa_namestaj/" target="_blank" rel="noopener noreferrer">@lipa_namestaj</a><br>
+                <a href="https://www.instagram.com/lipa_separei/" target="_blank" rel="noopener noreferrer">@lipa_separei</a>
+              </p>
+            </div>
+
+            <div class="contact-box">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:nnikolix5@gmail.com">nnikolix5@gmail.com</a><br>
+                <a href="mailto:djordje.nikolic@lipapozega.rs">djordje.nikolic@lipapozega.rs</a>
+              </p>
+            </div>
+
+            <div class="contact-box">
+              <h3>Adresa</h3>
+              <p>Godovički Put 66, Požega 31210</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
