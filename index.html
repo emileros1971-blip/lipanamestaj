@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#214d86" />
   <title>LIPA</title>
-  <meta name="description" content="LIPA – stolice, barske stolice, enterijer i materijali." />
+  <meta name="description" content="LIPA – stolice, barske stolice, separei, stolovi, enterijer i materijali." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -197,10 +197,10 @@
     }
 
     .lead{
-      max-width:640px;
+      max-width:560px;
       margin:0 0 0;
       color:#e6effb;
-      font-size:clamp(1rem,1.4vw,1.14rem);
+      font-size:clamp(1rem,1.4vw,1.08rem);
       line-height:1.7;
     }
 
@@ -256,6 +256,33 @@
       transform:translateX(4px);
       background:rgba(127,182,255,.16);
       border-color:rgba(127,182,255,.28);
+    }
+
+    .hero-info{
+      padding-top:0;
+    }
+
+    .hero-info-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .hero-info-card{
+      padding:22px;
+      border-radius:24px;
+    }
+
+    .hero-info-card h3{
+      margin:0 0 10px;
+      font-size:1.02rem;
+      color:var(--accent2);
+    }
+
+    .hero-info-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
     }
 
     section{
@@ -441,6 +468,42 @@
       color:var(--accent2);
     }
 
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+    }
+
+    .contact-card{
+      padding:24px;
+      border-radius:24px;
+    }
+
+    .contact-card h3{
+      margin:0 0 14px;
+      font-size:1.08rem;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-item{
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .contact-item strong{
+      display:block;
+      margin-bottom:4px;
+      color:var(--text);
+    }
+
     footer{
       padding:34px 0 50px;
     }
@@ -486,7 +549,9 @@
       .hero-right{justify-content:flex-start}
       .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
       .materials{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .about-grid{grid-template-columns:1fr}
+      .about-grid,
+      .hero-info-grid,
+      .contact-grid{grid-template-columns:1fr}
     }
 
     @media (max-width:760px){
@@ -524,7 +589,9 @@
         font-size:.9rem;
       }
       .about-card,
-      .footer-card{
+      .footer-card,
+      .hero-info-card,
+      .contact-card{
         padding:18px;
       }
     }
@@ -548,6 +615,7 @@
         <a href="#enterijer">Enterijer</a>
         <a href="#materijali">Materijali</a>
         <a href="#onama">O nama</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -558,12 +626,11 @@
         <div class="hero-card">
           <div class="hero-inner">
             <div class="hero-left">
-              <div class="eyebrow">Luksuzan izbor nameštaja</div>
-              <h1>Elegantne stolice i pažljivo birani materijali za savremen enterijer.</h1>
+              <div class="eyebrow">Nameštaj po meri prostora</div>
+              <h1>Stolice, barske stolice, separei i stolovi za poslovne i stambene enterijere.</h1>
               <p class="lead">
-                Dobro došli u LIPA kolekciju. Ovde možete predstaviti svoje modele stolica, barskih stolica,
-                inspiraciju za enterijer i izbor materijala, uz premium izgled sajta sa plavom podlogom,
-                staklenim panelima i velikim vizualima.
+                LIPA spaja proizvodnju, izbor materijala i prilagođavanje dimenzija, boja i završnih obrada,
+                kako bi svaki komad odgovarao prostoru u kojem se nalazi.
               </p>
             </div>
 
@@ -576,9 +643,38 @@
                   <a href="#enterijer"><span>Enterijer</span><span>→</span></a>
                   <a href="#materijali"><span>Materijali</span><span>→</span></a>
                   <a href="#onama"><span>O nama</span><span>→</span></a>
+                  <a href="#kontakt"><span>Kontakt</span><span>→</span></a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-info">
+      <div class="wrap">
+        <div class="hero-info-grid">
+          <div class="hero-info-card glass">
+            <h3>Izrada po izboru kupca</h3>
+            <p>
+              Birate dimenzije, visine, oblike, boje drveta, boje mebla ili pliša, kao i završne detalje
+              prema nameni prostora.
+            </p>
+          </div>
+          <div class="hero-info-card glass">
+            <h3>Materijali i konstrukcije</h3>
+            <p>
+              U proizvodnji koristimo masiv bukve, hrasta, jasena i druge pažljivo birane materijale,
+              uz drvene i metalne konstrukcije.
+            </p>
+          </div>
+          <div class="hero-info-card glass">
+            <h3>Za poslovne i stambene prostore</h3>
+            <p>
+              Opremamo restorane, kafiće, hotele, kuće i stanove, sa fokusom na funkcionalnost,
+              udobnost i sklad sa enterijerom.
+            </p>
           </div>
         </div>
       </div>
@@ -590,8 +686,9 @@
           <div>
             <h2>O nama</h2>
             <p>
-              Ovaj deo je predviđen za vaš uvodni tekst o brendu, kvalitetu izrade, pažnji prema detaljima
-              i načinu na koji birate forme, udobnost i završne materijale.
+              Naša firma posluje od 1.6.2005. godine na tržištu Srbije, ali i na tržištima drugih evropskih zemalja.
+              Prepoznatljivi smo po proizvodnji stolica, ali naš spektar proizvoda je širok i obuhvata stolice,
+              stolove, separee, krevete, šankove, gazišta, klupe, taburee, jastuke, sedalice i druge proizvode.
             </p>
           </div>
         </div>
@@ -599,17 +696,17 @@
         <div class="about-card glass">
           <div class="about-grid">
             <div class="about-box">
-              <h3>Kvalitet i estetika</h3>
+              <h3>Kompletna proizvodnja</h3>
               <p>
-                Ovde unesite tekst o kvalitetnim materijalima, preciznoj izradi i dizajnu koji lako nalazi
-                mesto u modernim i klasičnim enterijerima.
+                Naša proizvodnja je zaokružena od sušenja masiva drveta, preko stolarske radionice, lakirnice
+                i tapetarije, sve do skladištenja i transporta gotovih proizvoda.
               </p>
             </div>
             <div class="about-box">
-              <h3>Prilagodljiv izbor</h3>
+              <h3>Opremanje prostora</h3>
               <p>
-                Ovde unesite tekst o dostupnim dezenima, bojama, završnim obradama i mogućnostima izbora
-                modela za različite prostore i stilove uređenja.
+                Bavimo se opremanjem poslovnih i stambenih prostora, uz mogućnost prilagođavanja modela,
+                mera, materijala i završnih obrada potrebama svakog enterijera.
               </p>
             </div>
           </div>
@@ -622,7 +719,10 @@
         <div class="section-head">
           <div>
             <h2>Stolice</h2>
-            <p>Pripremljeno je 11 mesta za slike i opise modela stolica.</p>
+            <p>
+              Sve naše stolice proizvode se od masiva bukve, hrasta ili jasena. Na Vama je izbor boje drveta
+              i boje mebla ili pliša.
+            </p>
           </div>
         </div>
 
@@ -631,7 +731,7 @@
             <div class="media"><img src="assets/chair-1.jpg" alt="Stolica 1"></div>
             <div class="card-body">
               <h3>Stolica 1</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Model od masiva drveta, sa mogućnošću izbora vrste drveta, boje završne obrade i boje mebla ili pliša.</p>
             </div>
           </article>
 
@@ -639,7 +739,7 @@
             <div class="media"><img src="assets/chair-2.jpg" alt="Stolica 2"></div>
             <div class="card-body">
               <h3>Stolica 2</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Praktično rešenje za različite enterijere, uz izbor između bukve, hrasta ili jasena i željene završnice.</p>
             </div>
           </article>
 
@@ -647,7 +747,7 @@
             <div class="media"><img src="assets/chair-3.jpg" alt="Stolica 3"></div>
             <div class="card-body">
               <h3>Stolica 3</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Stolica sa naglaskom na stabilnost i udobnost, prilagodljiva kroz izbor drveta, tonova i presvlake.</p>
             </div>
           </article>
 
@@ -655,7 +755,7 @@
             <div class="media"><img src="assets/chair-4.jpg" alt="Stolica 4"></div>
             <div class="card-body">
               <h3>Stolica 4</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Model koji se lako uklapa u poslovne i stambene prostore, sa slobodnim izborom boje drveta i mebla.</p>
             </div>
           </article>
 
@@ -663,7 +763,7 @@
             <div class="media"><img src="assets/chair-5.jpg" alt="Stolica 5"></div>
             <div class="card-body">
               <h3>Stolica 5</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Kombinacija kvalitetnog masiva i pažljivo birane tapetarije, izrađena prema vizuelnom identitetu prostora.</p>
             </div>
           </article>
 
@@ -671,7 +771,7 @@
             <div class="media"><img src="assets/chair-6.jpg" alt="Stolica 6"></div>
             <div class="card-body">
               <h3>Stolica 6</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Elegantna stolica za enterijere u kojima su važni detalji, uz više opcija boja drveta i presvlaka.</p>
             </div>
           </article>
 
@@ -679,7 +779,7 @@
             <div class="media"><img src="assets/chair-7.jpg" alt="Stolica 7"></div>
             <div class="card-body">
               <h3>Stolica 7</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Model sa mogućnošću prilagođavanja finalnog izgleda kroz izbor materijala, tonova drveta i tekstila.</p>
             </div>
           </article>
 
@@ -687,7 +787,7 @@
             <div class="media"><img src="assets/chair-8.jpg" alt="Stolica 8"></div>
             <div class="card-body">
               <h3>Stolica 8</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Funkcionalna i estetski uravnotežena stolica, pogodna za restorane, domove i druge uređene prostore.</p>
             </div>
           </article>
 
@@ -695,7 +795,7 @@
             <div class="media"><img src="assets/chair-9.jpg" alt="Stolica 9"></div>
             <div class="card-body">
               <h3>Stolica 9</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Izrađena od masiva bukve, hrasta ili jasena, sa slobodom izbora boje drveta i boje mebla ili pliša.</p>
             </div>
           </article>
 
@@ -703,7 +803,7 @@
             <div class="media"><img src="assets/chair-10.jpg" alt="Stolica 10"></div>
             <div class="card-body">
               <h3>Stolica 10</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Model za enterijere koji traže sklad udobnosti, trajnosti i prilagođene završne obrade po izboru kupca.</p>
             </div>
           </article>
 
@@ -711,7 +811,7 @@
             <div class="media"><img src="assets/chair-11.jpg" alt="Stolica 11"></div>
             <div class="card-body">
               <h3>Stolica 11</h3>
-              <p>Kratak opis modela, materijala, forme i namene.</p>
+              <p>Finalni izgled stolice određujete Vi, kroz izbor vrste drveta, nijanse, tkanine i ukupnog karaktera modela.</p>
             </div>
           </article>
         </div>
@@ -722,8 +822,12 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Barske stolice</h2>
-            <p>Pripremljeno je 11 mesta za slike i opise barskih stolica.</p>
+            <h2>Barske i polubarske stolice</h2>
+            <p>
+              Naše barske i polubarske stolice su spoj masiva drveta i plastificiranog metala. Vi birate visine
+              sedenja koje odgovaraju Vašem šanku ili kuhinjskom ostrvu, kao i boje drveta, boje mebla ili pliša
+              i boje nogostopa.
+            </p>
           </div>
         </div>
 
@@ -732,7 +836,7 @@
             <div class="media"><img src="assets/bar-1.jpg" alt="Barska stolica 1"></div>
             <div class="card-body">
               <h3>Barska stolica 1</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Model sa konstrukcijom od drveta i metala, uz izbor visine sedenja, boje drveta, presvlake i nogostopa.</p>
             </div>
           </article>
 
@@ -740,7 +844,7 @@
             <div class="media"><img src="assets/bar-2.jpg" alt="Barska stolica 2"></div>
             <div class="card-body">
               <h3>Barska stolica 2</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Prilagodljivo rešenje za šankove i kuhinjska ostrva, sa mogućnošću potpunog usklađivanja sa enterijerom.</p>
             </div>
           </article>
 
@@ -748,7 +852,7 @@
             <div class="media"><img src="assets/bar-3.jpg" alt="Barska stolica 3"></div>
             <div class="card-body">
               <h3>Barska stolica 3</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Kombinacija masiva drveta i plastificiranog metala omogućava stabilnost, trajnost i moderan izgled.</p>
             </div>
           </article>
 
@@ -756,7 +860,7 @@
             <div class="media"><img src="assets/bar-4.jpg" alt="Barska stolica 4"></div>
             <div class="card-body">
               <h3>Barska stolica 4</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Visina sedenja prilagođava se prostoru, dok završna obrada ostaje u potpunosti u skladu sa Vašim izborom.</p>
             </div>
           </article>
 
@@ -764,7 +868,7 @@
             <div class="media"><img src="assets/bar-5.jpg" alt="Barska stolica 5"></div>
             <div class="card-body">
               <h3>Barska stolica 5</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Model namenjen enterijerima koji traže spoj topline drveta, čvrstine metala i kvalitetne tapetarije.</p>
             </div>
           </article>
 
@@ -772,7 +876,7 @@
             <div class="media"><img src="assets/bar-6.jpg" alt="Barska stolica 6"></div>
             <div class="card-body">
               <h3>Barska stolica 6</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Praktičan izbor za ugostiteljske i stambene prostore, uz slobodu kombinovanja boja i završnih detalja.</p>
             </div>
           </article>
 
@@ -780,7 +884,7 @@
             <div class="media"><img src="assets/bar-7.jpg" alt="Barska stolica 7"></div>
             <div class="card-body">
               <h3>Barska stolica 7</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Stolica čiji se izgled definiše kroz odabranu visinu, boju drveta, tkaninu i nijansu metalnih elemenata.</p>
             </div>
           </article>
 
@@ -788,7 +892,7 @@
             <div class="media"><img src="assets/bar-8.jpg" alt="Barska stolica 8"></div>
             <div class="card-body">
               <h3>Barska stolica 8</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Izrađena za svakodnevnu upotrebu, sa fokusom na funkcionalnost, udobnost i vizuelnu usklađenost prostora.</p>
             </div>
           </article>
 
@@ -796,7 +900,7 @@
             <div class="media"><img src="assets/bar-9.jpg" alt="Barska stolica 9"></div>
             <div class="card-body">
               <h3>Barska stolica 9</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Spaja kvalitetne materijale i mogućnost personalizacije kako bi odgovarala različitim stilovima enterijera.</p>
             </div>
           </article>
 
@@ -804,7 +908,7 @@
             <div class="media"><img src="assets/bar-10.jpg" alt="Barska stolica 10"></div>
             <div class="card-body">
               <h3>Barska stolica 10</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Model sa jasnim linijama i prilagodljivim detaljima, pogodan za savremene i klasične ambijente.</p>
             </div>
           </article>
 
@@ -812,7 +916,7 @@
             <div class="media"><img src="assets/bar-11.jpg" alt="Barska stolica 11"></div>
             <div class="card-body">
               <h3>Barska stolica 11</h3>
-              <p>Kratak opis modela, visine, konstrukcije i završne obrade.</p>
+              <p>Finalna kombinacija visine, drveta, metala i presvlake ostaje potpuno prilagođena Vašem prostoru.</p>
             </div>
           </article>
         </div>
@@ -824,7 +928,10 @@
         <div class="section-head">
           <div>
             <h2>Enterijer</h2>
-            <p>Pripremljena su 4 velika mesta za fotografije enterijera.</p>
+            <p>
+              Bavimo se opremanjem poslovnih i stambenih prostora, a naši proizvodi se uklapaju u različite stilove,
+              od toplih i klasičnih do savremenih i minimalističkih enterijera.
+            </p>
           </div>
         </div>
 
@@ -833,7 +940,7 @@
             <div class="media"><img src="assets/interior-1.jpg" alt="Enterijer 1"></div>
             <div class="card-body">
               <h3>Enterijer 1</h3>
-              <p>Prostor za opis stila, atmosfere i uklapanja nameštaja u ambijent.</p>
+              <p>Primer uklapanja stolica, stolova i drugih elemenata u ambijent koji traži sklad funkcije, estetike i udobnosti.</p>
             </div>
           </article>
 
@@ -841,7 +948,7 @@
             <div class="media"><img src="assets/interior-2.jpg" alt="Enterijer 2"></div>
             <div class="card-body">
               <h3>Enterijer 2</h3>
-              <p>Prostor za opis stila, atmosfere i uklapanja nameštaja u ambijent.</p>
+              <p>Rešenja prilagođena prostoru kroz izbor materijala, tonova i konstrukcija koje prate njegov karakter i namenu.</p>
             </div>
           </article>
 
@@ -849,7 +956,7 @@
             <div class="media"><img src="assets/interior-3.jpg" alt="Enterijer 3"></div>
             <div class="card-body">
               <h3>Enterijer 3</h3>
-              <p>Prostor za opis stila, atmosfere i uklapanja nameštaja u ambijent.</p>
+              <p>Prikaz enterijera u kojem se nameštaj povezuje sa ukupnim vizuelnim identitetom prostora i načinom korišćenja.</p>
             </div>
           </article>
 
@@ -857,7 +964,7 @@
             <div class="media"><img src="assets/interior-4.jpg" alt="Enterijer 4"></div>
             <div class="card-body">
               <h3>Enterijer 4</h3>
-              <p>Prostor za opis stila, atmosfere i uklapanja nameštaja u ambijent.</p>
+              <p>Ambijent u kojem pažljivo birani modeli, boje i završne obrade formiraju skladnu i funkcionalnu celinu.</p>
             </div>
           </article>
         </div>
@@ -869,7 +976,11 @@
         <div class="section-head">
           <div>
             <h2>Materijali</h2>
-            <p>Pripremljeno je 6 velikih selektabilnih kartica za prikaz materijala i dezena.</p>
+            <p>
+              Za ploče stolova koriste se masivi drveta poput bukve, hrasta, jasena ili oraha, kompakt ploče,
+              medijapani, oplemenjene iverice i mnoge imitacije, uključujući i imitaciju mermera. Konstrukcije
+              mogu biti od masiva drveta ili od plastificiranog metala, a sve boje ploča i nogara birate Vi.
+            </p>
           </div>
         </div>
 
@@ -877,8 +988,8 @@
           <article class="material-card glass active" tabindex="0" role="button" aria-pressed="true">
             <div class="media"><img src="assets/material-1.jpg" alt="Materijal 1"></div>
             <div class="card-body">
-              <h3>Materijal 1</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Masiv drveta</h3>
+              <p>Bukva, hrast, jasen ili orah kao izbor za prirodan izgled, trajnost i toplinu u enterijeru.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
@@ -886,8 +997,8 @@
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/material-2.jpg" alt="Materijal 2"></div>
             <div class="card-body">
-              <h3>Materijal 2</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Kompakt ploče</h3>
+              <p>Praktično i izdržljivo rešenje za ploče stolova, sa završnim obradama prilagođenim prostoru.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
@@ -895,8 +1006,8 @@
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/material-3.jpg" alt="Materijal 3"></div>
             <div class="card-body">
-              <h3>Materijal 3</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Medijapan i iverica</h3>
+              <p>Fleksibilan izbor za različite stilove enterijera, uz širok spektar tonova, dekora i obrada.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
@@ -904,8 +1015,8 @@
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/material-4.jpg" alt="Materijal 4"></div>
             <div class="card-body">
-              <h3>Materijal 4</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Imitacije i dekori</h3>
+              <p>Dostupne su mnoge imitacije, uključujući imitaciju mermera, za elegantan i savremen izgled.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
@@ -913,8 +1024,8 @@
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/material-5.jpg" alt="Materijal 5"></div>
             <div class="card-body">
-              <h3>Materijal 5</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Drvene konstrukcije</h3>
+              <p>Nogari i noseći elementi od masiva drveta donose toplinu, čvrstinu i prirodan karakter svakom komadu.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
@@ -922,11 +1033,70 @@
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/material-6.jpg" alt="Materijal 6"></div>
             <div class="card-body">
-              <h3>Materijal 6</h3>
-              <p>Opis teksture, boje, završne obrade i preporučene upotrebe.</p>
+              <h3>Metalne konstrukcije</h3>
+              <p>Plastificirani metal omogućava savremen izgled i dodatnu prilagodljivost kroz izbor boja konstrukcije.</p>
             </div>
             <div class="checkmark">✓</div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Kontakt</h2>
+            <p>
+              Za informacije o modelima, dimenzijama, materijalima, bojama i opremanju prostora, kontaktirajte nas
+              putem telefona, Instagrama ili e-mail adrese.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card glass">
+            <h3>Kontakt podaci</h3>
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Telefon</strong>
+                +381 612695784<br>
+                +381 604806777
+              </div>
+              <div class="contact-item">
+                <strong>Instagram</strong>
+                lipa_namestaj<br>
+                lipa_separei
+              </div>
+              <div class="contact-item">
+                <strong>E-mail</strong>
+                nnikolix5@gmail.com<br>
+                djordje.nikolic@lipapozega.rs
+              </div>
+              <div class="contact-item">
+                <strong>Adresa</strong>
+                Godovički Put 66, Požega 31210
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card glass">
+            <h3>Dodatno o asortimanu</h3>
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Separei</strong>
+                Na Vama je izbor svih dimenzija, boja i ukrasa mebla ili pliša, poput čestera ili pruga.
+              </div>
+              <div class="contact-item">
+                <strong>Stolovi</strong>
+                Na Vama je izbor svih dimenzija i oblika stolova, kao i materijala za ploče, boja i tipa konstrukcije.
+              </div>
+              <div class="contact-item">
+                <strong>Oprema po meri</strong>
+                U asortiman spadaju i kreveti, šankovi, gazišta, klupe, taburei, jastuci, sedalice i drugi proizvodi.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -936,8 +1106,7 @@
     <div class="wrap">
       <div class="footer-card glass">
         <p>
-          © LIPA. Ovaj šablon je pripremljen tako da samo zamenite slike u <strong>assets</strong> folderu
-          i po potrebi upišete svoje naslove i opise.
+          © LIPA. Vlasnik materijala na sajtu je LIPA, a www.silverado.pro je partner za održavanje sajta.
         </p>
         <a class="to-top" href="#top">Nazad na vrh</a>
       </div>
