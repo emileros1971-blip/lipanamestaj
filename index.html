@@ -13,7 +13,6 @@
 
   <style>
     :root{
-      /* ── Deep black + electric blue palette ── */
       --black:    #07080d;
       --bg:       #0a0c14;
       --bg2:      #0e1120;
@@ -83,7 +82,6 @@
       box-shadow:var(--shadow);
     }
 
-    /* ── TOPBAR ── */
     .topbar{
       position:sticky;
       top:0;
@@ -169,7 +167,6 @@
       border-color:var(--line);
     }
 
-    /* ── HERO ── */
     .hero{ padding:28px 0 22px; }
 
     .hero-card{
@@ -217,10 +214,7 @@
       text-shadow:0 8px 32px rgba(0,0,0,.5);
     }
 
-    h1 em{
-      font-style:italic;
-      color:var(--blue2);
-    }
+    h1 em{ font-style:italic; color:var(--blue2); }
 
     .lead{
       color:var(--text2);
@@ -253,11 +247,7 @@
       margin-bottom:4px;
     }
 
-    .hero-right{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
+    .hero-right{ display:flex; flex-direction:column; gap:16px; }
 
     .category-panel{
       padding:22px;
@@ -311,7 +301,6 @@
 
     .quick-links a:hover span:last-child{ opacity:1; }
 
-    /* ── SECTIONS ── */
     section{ padding:30px 0; }
 
     .section-head{
@@ -345,7 +334,6 @@
       margin:10px 0 0;
     }
 
-    /* ── PRODUCT CARDS ── */
     .cards{
       display:grid;
       grid-template-columns:repeat(4, minmax(0,1fr));
@@ -388,7 +376,6 @@
       color:var(--blue2);
     }
 
-    /* ── INTERIOR GRID ── */
     .interior-grid{
       display:grid;
       grid-template-columns:repeat(2, minmax(0,1fr));
@@ -408,7 +395,6 @@
 
     .interior-card .media{ aspect-ratio:16/10; }
 
-    /* ── MATERIALS ── */
     .materials{
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
@@ -430,9 +416,7 @@
 
     .material-card .media{ aspect-ratio:4/3; }
 
-    .material-card .card-body{
-      padding:16px 60px 18px 18px;
-    }
+    .material-card .card-body{ padding:16px 60px 18px 18px; }
 
     .material-card .card-body h3{
       font-family:'Cormorant Garamond', serif;
@@ -476,17 +460,13 @@
       color:var(--blue2);
     }
 
-    /* ── CONTACT ── */
     .contact-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:16px;
     }
 
-    .contact-card{
-      padding:26px;
-      border-radius:22px;
-    }
+    .contact-card{ padding:26px; border-radius:22px; }
 
     .contact-card h3{
       font-family:'Cormorant Garamond', serif;
@@ -520,7 +500,6 @@
       letter-spacing:.06em;
     }
 
-    /* ── FOOTER ── */
     footer{ padding:32px 0 50px; }
 
     .footer-card{
@@ -563,14 +542,12 @@
       color:var(--text);
     }
 
-    /* ── DIVIDER ── */
     .divider{
       height:1px;
       background:linear-gradient(90deg, transparent, var(--line), transparent);
       margin:4px 0;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width:1100px){
       .hero-inner{ grid-template-columns:1fr; }
       .cards{ grid-template-columns:repeat(3, minmax(0,1fr)); }
@@ -583,8 +560,7 @@
       .menu{ width:100%; justify-content:flex-start; }
       .hero-inner{ padding:28px 22px 30px; }
       .cards{ grid-template-columns:repeat(2, minmax(0,1fr)); }
-      .interior-grid,
-      .materials{ grid-template-columns:1fr; }
+      .interior-grid, .materials{ grid-template-columns:1fr; }
       .footer-card{ flex-direction:column; align-items:flex-start; }
     }
 
@@ -598,7 +574,6 @@
 </head>
 <body>
 
-  <!-- TOPBAR -->
   <header class="topbar">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="LIPA početna">
@@ -608,7 +583,6 @@
           <span>Stolice · Barske stolice · Enterijer · Materijali</span>
         </div>
       </a>
-
       <nav class="menu" aria-label="Glavna navigacija">
         <a href="#stolice">Stolice</a>
         <a href="#barske">Barske</a>
@@ -622,23 +596,20 @@
 
   <main id="top">
 
-    <!-- HERO -->
     <section class="hero">
       <div class="wrap">
         <div class="hero-card">
           <div class="hero-inner">
-
             <div class="hero-left">
               <div class="eyebrow">Nameštaj po meri prostora</div>
               <h1>Stolice, barske stolice, <em>separei</em> i stolovi za poslovne i stambene enterijere.</h1>
               <p class="lead">
-                LIPA posluje od 1.6.2005. godine na tržištu Srbije i других evropskih zemalja.
+                LIPA posluje od 1.6.2005. godine na tržištu Srbije i drugih evropskih zemalja.
                 Prepoznatljivi smo po proizvodnji stolica, ali naš spektar proizvoda je širok —
                 stolice, stolovi, separei, kreveti, šankovi, gazišta, klupe, taburei, jastuci,
                 sedalice i drugi proizvodi su sastavni deo našeg asortimana.
                 Bavimo se opremanjem poslovnih i stambenih prostora.
               </p>
-
               <div class="hero-about">
                 <div class="hero-about-item">
                   <strong>Stolice</strong>
@@ -658,7 +629,6 @@
                 </div>
               </div>
             </div>
-
             <div class="hero-right">
               <div class="category-panel">
                 <h2>Pogledajte</h2>
@@ -672,13 +642,11 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STOLICE -->
     <section id="stolice">
       <div class="wrap">
         <div class="section-head">
@@ -689,25 +657,24 @@
           </div>
         </div>
         <div class="cards">
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-1_png.png" alt="Stolica 1"></div><div class="card-label">Stolica 1</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-2_png.png" alt="Stolica 2"></div><div class="card-label">Stolica 2</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-3_png.png" alt="Stolica 3"></div><div class="card-label">Stolica 3</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-4_png.png" alt="Stolica 4"></div><div class="card-label">Stolica 4</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-5_png.png" alt="Stolica 5"></div><div class="card-label">Stolica 5</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-6_png.png" alt="Stolica 6"></div><div class="card-label">Stolica 6</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-7_png.png" alt="Stolica 7"></div><div class="card-label">Stolica 7</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-8_png.png" alt="Stolica 8"></div><div class="card-label">Stolica 8</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-9_png.png" alt="Stolica 9"></div><div class="card-label">Stolica 9</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-10_png.png" alt="Stolica 10"></div><div class="card-label">Stolica 10</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-11_png.png" alt="Stolica 11"></div><div class="card-label">Stolica 11</div></article>
-          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-12_png.png" alt="Stolica 12"></div><div class="card-label">Stolica 12</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-1.png.png" alt="Stolica 1"></div><div class="card-label">Stolica 1</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-2.png.png" alt="Stolica 2"></div><div class="card-label">Stolica 2</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-3.png.png" alt="Stolica 3"></div><div class="card-label">Stolica 3</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-4.png.png" alt="Stolica 4"></div><div class="card-label">Stolica 4</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-5.png.png" alt="Stolica 5"></div><div class="card-label">Stolica 5</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-6.png.png" alt="Stolica 6"></div><div class="card-label">Stolica 6</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-7.png.png" alt="Stolica 7"></div><div class="card-label">Stolica 7</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-8.png.png" alt="Stolica 8"></div><div class="card-label">Stolica 8</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-9.png.png" alt="Stolica 9"></div><div class="card-label">Stolica 9</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-10.png.png" alt="Stolica 10"></div><div class="card-label">Stolica 10</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-11.png.png" alt="Stolica 11"></div><div class="card-label">Stolica 11</div></article>
+          <article class="product-card glass"><div class="media"><img src="assets/assets/chair-12.png.png" alt="Stolica 12"></div><div class="card-label">Stolica 12</div></article>
         </div>
       </div>
     </section>
 
     <div class="wrap"><div class="divider"></div></div>
 
-    <!-- BARSKE -->
     <section id="barske">
       <div class="wrap">
         <div class="section-head">
@@ -735,7 +702,6 @@
 
     <div class="wrap"><div class="divider"></div></div>
 
-    <!-- ENTERIJER -->
     <section id="enterijer">
       <div class="wrap">
         <div class="section-head">
@@ -756,63 +722,44 @@
 
     <div class="wrap"><div class="divider"></div></div>
 
-    <!-- MATERIJALI -->
     <section id="materijali">
       <div class="wrap">
         <div class="section-head">
           <div>
             <h2>Materijali</h2>
             <div class="section-rule"></div>
-            <p>Za ploče stolova koriste se masivi drveta poput bukve, hrasta, jasena ili oraha, kompakt ploče, medijapani, oplemenjene iverice i mnoge imitacije, poput imitacije mermera. Konstrukcije mogu biti od masiva drveta ili od plastificiranog metala, a sve boje ploča i nogara birate Vi.</p>
+            <p>Za ploče stolova koriste se masivi drveta poput bukve, hrasta, jasena ili oraha, kompakt ploče, medijapani, oplemenjene iverice i mnoge imitacije, poput imitacije mermera.</p>
           </div>
         </div>
         <div class="materials">
           <article class="material-card glass active" tabindex="0" role="button" aria-pressed="true">
             <div class="media"><img src="assets/assets/material-1.jpg" alt="Materijal 1"></div>
-            <div class="card-body">
-              <h3>Masiv drveta</h3>
-              <p>Bukva, hrast, jasen ili orah kao izbor za prirodan izgled, trajnost i toplinu u enterijeru.</p>
-            </div>
+            <div class="card-body"><h3>Masiv drveta</h3><p>Bukva, hrast, jasen ili orah kao izbor za prirodan izgled, trajnost i toplinu u enterijeru.</p></div>
             <div class="checkmark">✓</div>
           </article>
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/assets/material-2.jpg" alt="Materijal 2"></div>
-            <div class="card-body">
-              <h3>Kompakt ploče</h3>
-              <p>Praktično i izdržljivo rešenje za ploče stolova, sa završnim obradama prilagođenim prostoru.</p>
-            </div>
+            <div class="card-body"><h3>Kompakt ploče</h3><p>Praktično i izdržljivo rešenje za ploče stolova, sa završnim obradama prilagođenim prostoru.</p></div>
             <div class="checkmark">✓</div>
           </article>
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/assets/material-3.jpg" alt="Materijal 3"></div>
-            <div class="card-body">
-              <h3>Medijapan i iverica</h3>
-              <p>Fleksibilan izbor za različite stilove enterijera, uz širok spektar tonova, dekora i obrada.</p>
-            </div>
+            <div class="card-body"><h3>Medijapan i iverica</h3><p>Fleksibilan izbor za različite stilove enterijera, uz širok spektar tonova, dekora i obrada.</p></div>
             <div class="checkmark">✓</div>
           </article>
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/assets/material-4.jpg" alt="Materijal 4"></div>
-            <div class="card-body">
-              <h3>Imitacije i dekori</h3>
-              <p>Dostupne su mnoge imitacije, uključujući imitaciju mermera, za elegantan i savremen izgled.</p>
-            </div>
+            <div class="card-body"><h3>Imitacije i dekori</h3><p>Dostupne su mnoge imitacije, uključujući imitaciju mermera, za elegantan i savremen izgled.</p></div>
             <div class="checkmark">✓</div>
           </article>
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/assets/material-5.jpg" alt="Materijal 5"></div>
-            <div class="card-body">
-              <h3>Drvene konstrukcije</h3>
-              <p>Nogari i noseći elementi od masiva drveta donose toplinu, čvrstinu i prirodan karakter svakom komadu.</p>
-            </div>
+            <div class="card-body"><h3>Drvene konstrukcije</h3><p>Nogari i noseći elementi od masiva drveta donose toplinu, čvrstinu i prirodan karakter svakom komadu.</p></div>
             <div class="checkmark">✓</div>
           </article>
           <article class="material-card glass" tabindex="0" role="button" aria-pressed="false">
             <div class="media"><img src="assets/assets/material-6.jpg" alt="Materijal 6"></div>
-            <div class="card-body">
-              <h3>Metalne konstrukcije</h3>
-              <p>Plastificirani metal omogućava savremen izgled i dodatnu prilagodljivost kroz izbor boja konstrukcije.</p>
-            </div>
+            <div class="card-body"><h3>Metalne konstrukcije</h3><p>Plastificirani metal omogućava savremen izgled i dodatnu prilagodljivost kroz izbor boja konstrukcije.</p></div>
             <div class="checkmark">✓</div>
           </article>
         </div>
@@ -821,14 +768,10 @@
 
     <div class="wrap"><div class="divider"></div></div>
 
-    <!-- O NAMA -->
     <section id="onama">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <h2>O nama</h2>
-            <div class="section-rule"></div>
-          </div>
+          <div><h2>O nama</h2><div class="section-rule"></div></div>
         </div>
         <div class="glass" style="border-radius:22px; padding:32px 36px;">
           <p style="margin-bottom:16px; line-height:1.9; color:var(--muted); font-size:.95rem; font-weight:300;">
@@ -847,7 +790,6 @@
 
     <div class="wrap"><div class="divider"></div></div>
 
-    <!-- KONTAKT -->
     <section id="kontakt">
       <div class="wrap">
         <div class="section-head">
@@ -857,48 +799,22 @@
             <p>Za informacije o modelima, dimenzijama, materijalima, bojama i opremanju prostora, kontaktirajte nas putem telefona, Instagrama ili e-mail adrese.</p>
           </div>
         </div>
-
         <div class="contact-grid">
           <div class="contact-card glass">
             <h3>Kontakt podaci</h3>
             <div class="contact-list">
-              <div class="contact-item">
-                <strong>Telefon</strong>
-                +381 612695784<br>
-                +381 604806777
-              </div>
-              <div class="contact-item">
-                <strong>Instagram</strong>
-                lipa_namestaj<br>
-                lipa_separei
-              </div>
-              <div class="contact-item">
-                <strong>Gmail</strong>
-                nnikolix5@gmail.com<br>
-                djordje.nikolic@lipapozega.rs
-              </div>
-              <div class="contact-item">
-                <strong>Adresa</strong>
-                Godovički Put 66, Požega 31210
-              </div>
+              <div class="contact-item"><strong>Telefon</strong>+381 612695784<br>+381 604806777</div>
+              <div class="contact-item"><strong>Instagram</strong>lipa_namestaj<br>lipa_separei</div>
+              <div class="contact-item"><strong>Gmail</strong>nnikolix5@gmail.com<br>djordje.nikolic@lipapozega.rs</div>
+              <div class="contact-item"><strong>Adresa</strong>Godovički Put 66, Požega 31210</div>
             </div>
           </div>
-
           <div class="contact-card glass">
             <h3>Dodatno o asortimanu</h3>
             <div class="contact-list">
-              <div class="contact-item">
-                <strong>Separei</strong>
-                Na Vama je izbor svih dimenzija, boja i ukrasa mebla/pliša, poput čestera ili pruga.
-              </div>
-              <div class="contact-item">
-                <strong>Stolovi</strong>
-                Na Vama je izbor svih dimenzija i oblika stolova, kao i materijala za ploče, boja i tipa konstrukcije.
-              </div>
-              <div class="contact-item">
-                <strong>Oprema po meri</strong>
-                U asortiman spadaju i kreveti, šankovi, gazišta, klupe, taburei, jastuci, sedalice i drugi proizvodi.
-              </div>
+              <div class="contact-item"><strong>Separei</strong>Na Vama je izbor svih dimenzija, boja i ukrasa mebla/pliša, poput čestera ili pruga.</div>
+              <div class="contact-item"><strong>Stolovi</strong>Na Vama je izbor svih dimenzija i oblika stolova, kao i materijala za ploče, boja i tipa konstrukcije.</div>
+              <div class="contact-item"><strong>Oprema po meri</strong>U asortiman spadaju i kreveti, šankovi, gazišta, klupe, taburei, jastuci, sedalice i drugi proizvodi.</div>
             </div>
           </div>
         </div>
