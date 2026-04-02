@@ -333,6 +333,56 @@
       color:var(--blue2);
     }
 
+    /* ─── LIGHTBOX ─── */
+    .lightbox{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:99999;
+      background:rgba(0,0,0,.88);
+      backdrop-filter:blur(12px);
+      align-items:center;
+      justify-content:center;
+      cursor:zoom-out;
+    }
+    .lightbox.open{ display:flex; }
+    .lightbox img{
+      max-width:90vw;
+      max-height:90vh;
+      object-fit:contain;
+      border-radius:12px;
+      box-shadow:0 40px 80px rgba(0,0,0,.8);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .lightbox-close{
+      position:absolute;
+      top:20px; right:24px;
+      font-size:2rem;
+      color:rgba(255,255,255,.6);
+      cursor:pointer;
+      line-height:1;
+      transition:.2s;
+    }
+    .lightbox-close:hover{ color:#fff; }
+    .tray-card.selectable .tray-img{ position:relative; }
+    .tray-card.selectable .zoom-hint{
+      position:absolute;
+      bottom:8px; left:50%;
+      transform:translateX(-50%);
+      background:rgba(0,0,0,.55);
+      backdrop-filter:blur(6px);
+      color:rgba(255,255,255,.75);
+      font-size:.7rem;
+      letter-spacing:.08em;
+      padding:4px 10px;
+      border-radius:999px;
+      pointer-events:none;
+      opacity:0;
+      transition:.2s;
+      white-space:nowrap;
+    }
+    .tray-card.selectable:hover .zoom-hint{ opacity:1; }
+
     /* ─── CONTACT, FOOTER ─── */
     .contact-grid{
       display:grid; grid-template-columns:1.1fr .9fr; gap:16px;
@@ -692,27 +742,63 @@
         <div class="interior-tray">
           <article class="tray-card">
             <div class="tray-img tray-img-wide">
-              <img src="assets/assets/interior-1.jpg" alt="Enterijer 1">
+              <img src="assets/assets/IMG-27f4c0584beeb57e30186877a21e08da-V.jpg" alt="Enterijer 1">
             </div>
             <div class="tray-label">Enterijer 1</div>
           </article>
           <article class="tray-card">
             <div class="tray-img tray-img-wide">
-              <img src="assets/assets/interior-2.jpg" alt="Enterijer 2">
+              <img src="assets/assets/IMG-30c81807ca535bcb0de1dd77a62b2331-V.jpg" alt="Enterijer 2">
             </div>
             <div class="tray-label">Enterijer 2</div>
           </article>
           <article class="tray-card">
             <div class="tray-img tray-img-wide">
-              <img src="assets/assets/interior-3.jpg" alt="Enterijer 3">
+              <img src="assets/assets/IMG-7374b9e3e42c3fe5ab3e4e03d60ee631-V.jpg" alt="Enterijer 3">
             </div>
             <div class="tray-label">Enterijer 3</div>
           </article>
           <article class="tray-card">
             <div class="tray-img tray-img-wide">
-              <img src="assets/assets/interior-4.jpg" alt="Enterijer 4">
+              <img src="assets/assets/IMG-9bdfea5506c4c8ca6046bd88d289afdf-V.jpg" alt="Enterijer 4">
             </div>
             <div class="tray-label">Enterijer 4</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-9d4b2f27c4eda316eed03fdf76f22c88-V.jpg" alt="Enterijer 5">
+            </div>
+            <div class="tray-label">Enterijer 5</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-9feee8a8f31adb38ed518307b641e371-V.jpg" alt="Enterijer 6">
+            </div>
+            <div class="tray-label">Enterijer 6</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-acb1795455a899fa023cd2f71600c65b-V.jpg" alt="Enterijer 7">
+            </div>
+            <div class="tray-label">Enterijer 7</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-d6b4c3bf0d078658952e2b966d596615-V.jpg" alt="Enterijer 8">
+            </div>
+            <div class="tray-label">Enterijer 8</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-daadf3ce834d261b10c7be2674e7703e-V.jpg" alt="Enterijer 9">
+            </div>
+            <div class="tray-label">Enterijer 9</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide">
+              <img src="assets/assets/IMG-e2cba32b46ef3e33362718e34daf8041-V.jpg" alt="Enterijer 10">
+            </div>
+            <div class="tray-label">Enterijer 10</div>
           </article>
         </div>
       </div>
@@ -1404,8 +1490,45 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Selectable material cards — toggle active state
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    // Lightbox for material swatches
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
     document.querySelectorAll('.tray-card.selectable').forEach(card => {
-      const toggle = () => {
-      
+      // Add zoom hint
+      const hint = document.createElement('span');
+      hint.className = 'zoom-hint';
+      hint.textContent = '🔍 Prikaži celu sliku';
+      card.querySelector('.tray-img').appendChild(hint);
+
+      // Click opens lightbox
+      card.addEventListener('click', () => {
+        const img = card.querySelector('.tray-img img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+      });
+    });
+
+    // Close lightbox
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+
+  </script>
+</body>
+</html>
