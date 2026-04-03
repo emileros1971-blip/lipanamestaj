@@ -33,7 +33,6 @@
       --radius-sm:14px;
       --wrap:     1240px;
 
-      /* Card tray system — unified token */
       --card-radius: 16px;
       --card-label-font: 'Cormorant Garamond', serif;
       --card-label-size: 1.05rem;
@@ -207,19 +206,12 @@
 
     /* ═══════════════════════════════════════════════
        UNIFIED CARD TRAY SYSTEM
-       All product + material cards share these tokens
     ═══════════════════════════════════════════════ */
-
-    /* The grid container */
-    .tray{
-      display:grid;
-      gap:16px;
-    }
+    .tray{ display:grid; gap:16px; }
     .tray-4{ grid-template-columns:repeat(4, minmax(0,1fr)); }
     .tray-3{ grid-template-columns:repeat(3, minmax(0,1fr)); }
     .tray-2{ grid-template-columns:repeat(2, minmax(0,1fr)); }
 
-    /* Each tray card */
     .tray-card{
       overflow:hidden;
       border-radius:var(--card-radius);
@@ -238,7 +230,6 @@
       border-color:rgba(61,111,255,.24);
     }
 
-    /* Consistent image box — same aspect ratio for all product cards */
     .tray-img{
       aspect-ratio:1/1;
       overflow:hidden;
@@ -253,13 +244,9 @@
     }
     .tray-card:hover .tray-img img{ transform:scale(1.05); }
 
-    /* Wider aspect for interior / 2-col cards */
     .tray-img-wide{ aspect-ratio:16/10; }
-
-    /* Material swatch — slightly taller crop */
     .tray-img-swatch{ aspect-ratio:4/3; }
 
-    /* The label bar — same font, size, padding everywhere */
     .tray-label{
       padding:var(--card-label-pad);
       font-family:var(--card-label-font);
@@ -274,7 +261,6 @@
       gap:5px;
     }
 
-    /* Optional sub-text under label (for materials) */
     .tray-label-sub{
       font-family:'Jost', sans-serif;
       font-size:.80rem;
@@ -284,7 +270,6 @@
       line-height:1.6;
     }
 
-    /* Category badge — tiny pill inside label area */
     .tray-badge{
       display:inline-block;
       padding:3px 10px;
@@ -301,14 +286,14 @@
       margin-bottom:2px;
     }
 
-    /* ─── INTERIOR section keeps 2-col tray ─── */
+    /* ─── INTERIOR section ─── */
     .interior-tray{
       display:grid;
       grid-template-columns:repeat(2, minmax(0,1fr));
       gap:16px;
     }
 
-    /* ─── MATERIAL CARDS: selectable toggle ─── */
+    /* ─── MATERIAL CARDS ─── */
     .tray-card.selectable{ cursor:pointer; position:relative; }
     .tray-card.selectable .tray-check{
       position:absolute;
@@ -531,125 +516,90 @@
         </div>
         <div class="tray tray-4">
 
-          <!-- Named models with proper product names -->
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Lux.jpg" alt="Lux">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Lux
-            </div>
+            <div class="tray-img"><img src="assets/assets/Lux.jpg" alt="Lux"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Lux</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Madrid.jpg" alt="Madrid">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Madrid
-            </div>
+            <div class="tray-img"><img src="assets/assets/Madrid.jpg" alt="Madrid"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Madrid</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Paris.jpg" alt="Paris">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Paris
-            </div>
+            <div class="tray-img"><img src="assets/assets/Paris.jpg" alt="Paris"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Paris</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Venetto.jpg" alt="Venetto">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Venetto
-            </div>
+            <div class="tray-img"><img src="assets/assets/Venetto.jpg" alt="Venetto"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Venetto</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Vronski.jpg" alt="Vronski">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Vronski
-            </div>
+            <div class="tray-img"><img src="assets/assets/Vronski.jpg" alt="Vronski"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Vronski</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Dante.jpg" alt="Dante">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Dante
-            </div>
+            <div class="tray-img"><img src="assets/assets/Dante.jpg" alt="Dante"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Dante</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Firenze.jpg" alt="Firenze">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Firenze
-            </div>
+            <div class="tray-img"><img src="assets/assets/Firenze.jpg" alt="Firenze"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Firenze</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Frida.jpg" alt="Frida">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Frida
-            </div>
+            <div class="tray-img"><img src="assets/assets/Frida.jpg" alt="Frida"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Frida</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/London.jpg" alt="London">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              London
-            </div>
+            <div class="tray-img"><img src="assets/assets/London.jpg" alt="London"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>London</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Boston.jpg" alt="Boston">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Boston
-            </div>
+            <div class="tray-img"><img src="assets/assets/Boston.jpg" alt="Boston"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Boston</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Dublin.jpg" alt="Dublin">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Dublin
-            </div>
+            <div class="tray-img"><img src="assets/assets/Dublin.jpg" alt="Dublin"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Dublin</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Atina L.jpg" alt="Atina L">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Stolica</span>
-              Atina L
-            </div>
+            <div class="tray-img"><img src="assets/assets/Atina L.jpg" alt="Atina L"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Atina L</div>
+          </article>
+
+          <!-- ═══ NEW CHAIR MODELS ═══ -->
+          <article class="tray-card">
+            <div class="tray-img"><img src="assets/assets/2b80adbb-3e0d-458e-989a-ae61d74cfffd.png" alt="Nova stolica 1"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Nova stolica 1</div>
+          </article>
+
+          <article class="tray-card">
+            <div class="tray-img"><img src="assets/assets/37241669-f6ac-410d-92ab-4a3b7d251fce.png" alt="Nova stolica 2"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Nova stolica 2</div>
+          </article>
+
+          <article class="tray-card">
+            <div class="tray-img"><img src="assets/assets/53be8286-5367-42dd-a9cb-7ec770d77831.png" alt="Nova stolica 3"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Nova stolica 3</div>
+          </article>
+
+          <article class="tray-card">
+            <div class="tray-img"><img src="assets/assets/5ed25e96-33a2-4a40-8269-4d35ed77a665.png" alt="Nova stolica 4"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Nova stolica 4</div>
+          </article>
+
+          <article class="tray-card">
+            <div class="tray-img"><img src="assets/assets/f41c4aab-0470-40ff-96ef-3307ccf334cb.png" alt="Nova stolica 5"></div>
+            <div class="tray-label"><span class="tray-badge">Stolica</span>Nova stolica 5</div>
           </article>
 
         </div>
@@ -671,57 +621,29 @@
         <div class="tray tray-4">
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Barski Lux.jpg" alt="Barski Lux">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Barska</span>
-              Barski Lux
-            </div>
+            <div class="tray-img"><img src="assets/assets/Barski Lux.jpg" alt="Barski Lux"></div>
+            <div class="tray-label"><span class="tray-badge">Barska</span>Barski Lux</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Barski Vronski.jpg" alt="Barski Vronski">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Barska</span>
-              Barski Vronski
-            </div>
+            <div class="tray-img"><img src="assets/assets/Barski Vronski.jpg" alt="Barski Vronski"></div>
+            <div class="tray-label"><span class="tray-badge">Barska</span>Barski Vronski</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Barski Miami.jpg" alt="Barski Miami">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Barska</span>
-              Barski Miami
-            </div>
+            <div class="tray-img"><img src="assets/assets/Barski Miami.jpg" alt="Barski Miami"></div>
+            <div class="tray-label"><span class="tray-badge">Barska</span>Barski Miami</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Barska Dante.jpg" alt="Barska Dante">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Barska</span>
-              Barska Dante
-            </div>
+            <div class="tray-img"><img src="assets/assets/Barska Dante.jpg" alt="Barska Dante"></div>
+            <div class="tray-label"><span class="tray-badge">Barska</span>Barska Dante</div>
           </article>
 
           <article class="tray-card">
-            <div class="tray-img">
-              <img src="assets/assets/Barska Atina D.jpg" alt="Barska Atina D">
-            </div>
-            <div class="tray-label">
-              <span class="tray-badge">Barska</span>
-              Barska Atina D
-            </div>
+            <div class="tray-img"><img src="assets/assets/Barska Atina D.jpg" alt="Barska Atina D"></div>
+            <div class="tray-label"><span class="tray-badge">Barska</span>Barska Atina D</div>
           </article>
-
-          <!-- Placeholder slots for additional bar stools if added later -->
-          <!-- Add more tray-card blocks here as new models arrive -->
 
         </div>
       </div>
@@ -740,66 +662,99 @@
           </div>
         </div>
         <div class="interior-tray">
+
+          <!-- Original 10 -->
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-27f4c0584beeb57e30186877a21e08da-V.jpg" alt="Enterijer 1">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-27f4c0584beeb57e30186877a21e08da-V.jpg" alt="Enterijer 1"></div>
             <div class="tray-label">Enterijer 1</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-30c81807ca535bcb0de1dd77a62b2331-V.jpg" alt="Enterijer 2">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-30c81807ca535bcb0de1dd77a62b2331-V.jpg" alt="Enterijer 2"></div>
             <div class="tray-label">Enterijer 2</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-7374b9e3e42c3fe5ab3e4e03d60ee631-V.jpg" alt="Enterijer 3">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-7374b9e3e42c3fe5ab3e4e03d60ee631-V.jpg" alt="Enterijer 3"></div>
             <div class="tray-label">Enterijer 3</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-9bdfea5506c4c8ca6046bd88d289afdf-V.jpg" alt="Enterijer 4">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-9bdfea5506c4c8ca6046bd88d289afdf-V.jpg" alt="Enterijer 4"></div>
             <div class="tray-label">Enterijer 4</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-9d4b2f27c4eda316eed03fdf76f22c88-V.jpg" alt="Enterijer 5">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-9d4b2f27c4eda316eed03fdf76f22c88-V.jpg" alt="Enterijer 5"></div>
             <div class="tray-label">Enterijer 5</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-9feee8a8f31adb38ed518307b641e371-V.jpg" alt="Enterijer 6">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-9feee8a8f31adb38ed518307b641e371-V.jpg" alt="Enterijer 6"></div>
             <div class="tray-label">Enterijer 6</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-acb1795455a899fa023cd2f71600c65b-V.jpg" alt="Enterijer 7">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-acb1795455a899fa023cd2f71600c65b-V.jpg" alt="Enterijer 7"></div>
             <div class="tray-label">Enterijer 7</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-d6b4c3bf0d078658952e2b966d596615-V.jpg" alt="Enterijer 8">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-d6b4c3bf0d078658952e2b966d596615-V.jpg" alt="Enterijer 8"></div>
             <div class="tray-label">Enterijer 8</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-daadf3ce834d261b10c7be2674e7703e-V.jpg" alt="Enterijer 9">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-daadf3ce834d261b10c7be2674e7703e-V.jpg" alt="Enterijer 9"></div>
             <div class="tray-label">Enterijer 9</div>
           </article>
           <article class="tray-card">
-            <div class="tray-img tray-img-wide">
-              <img src="assets/assets/IMG-e2cba32b46ef3e33362718e34daf8041-V.jpg" alt="Enterijer 10">
-            </div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-e2cba32b46ef3e33362718e34daf8041-V.jpg" alt="Enterijer 10"></div>
             <div class="tray-label">Enterijer 10</div>
           </article>
+
+          <!-- ═══ NEW ENTERIJER PHOTOS ═══ -->
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-29-32-147.jpg" alt="Enterijer 11"></div>
+            <div class="tray-label">Enterijer 11</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-09-406.jpg" alt="Enterijer 12"></div>
+            <div class="tray-label">Enterijer 12</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-10-204.jpg" alt="Enterijer 13"></div>
+            <div class="tray-label">Enterijer 13</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-13-166.jpg" alt="Enterijer 14"></div>
+            <div class="tray-label">Enterijer 14</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-41-681.jpg" alt="Enterijer 15"></div>
+            <div class="tray-label">Enterijer 15</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-41-766.jpg" alt="Enterijer 16"></div>
+            <div class="tray-label">Enterijer 16</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-41-838.jpg" alt="Enterijer 17"></div>
+            <div class="tray-label">Enterijer 17</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-31-41-893.jpg" alt="Enterijer 18"></div>
+            <div class="tray-label">Enterijer 18</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-32-04-263.jpg" alt="Enterijer 19"></div>
+            <div class="tray-label">Enterijer 19</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-32-30-115.jpg" alt="Enterijer 20"></div>
+            <div class="tray-label">Enterijer 20</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-02_19-40-11-021.jpg" alt="Enterijer 21"></div>
+            <div class="tray-label">Enterijer 21</div>
+          </article>
+          <article class="tray-card">
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-03_12-17-28-154.jpg" alt="Enterijer 22"></div>
+            <div class="tray-label">Enterijer 22</div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -817,608 +772,333 @@
           </div>
         </div>
 
-        <!-- Material fabric swatches — all from the assets_main folder -->
-        <!-- 3-column tray with swatch aspect ratio, selectable toggle -->
         <div class="tray tray-3">
 
           <article class="tray-card selectable active" tabindex="0" role="button" aria-pressed="true">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142240.jpg" alt="Mebl / Pliš — kolekcija 1">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 1 — širok spektar boja</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142240.jpg" alt="Mebl / Pliš — kolekcija 1"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 1 — širok spektar boja</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142304.jpg" alt="Mebl / Pliš — kolekcija 2">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 2 — mekani tonovi</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142304.jpg" alt="Mebl / Pliš — kolekcija 2"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 2 — mekani tonovi</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142317.jpg" alt="Mebl / Pliš — kolekcija 3">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 3 — prirodni tonovi</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142317.jpg" alt="Mebl / Pliš — kolekcija 3"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 3 — prirodni tonovi</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142350.jpg" alt="Mebl / Pliš — kolekcija 4">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 4</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142350.jpg" alt="Mebl / Pliš — kolekcija 4"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 4</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142358.jpg" alt="Mebl / Pliš — kolekcija 5">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 5</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142358.jpg" alt="Mebl / Pliš — kolekcija 5"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 5</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142406.jpg" alt="Mebl / Pliš — kolekcija 6">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 6</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142406.jpg" alt="Mebl / Pliš — kolekcija 6"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 6</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142415.jpg" alt="Mebl / Pliš — kolekcija 7">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 7</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142415.jpg" alt="Mebl / Pliš — kolekcija 7"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 7</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142442.jpg" alt="Mebl / Pliš — kolekcija 8">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 8</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142442.jpg" alt="Mebl / Pliš — kolekcija 8"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 8</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142450.jpg" alt="Mebl / Pliš — kolekcija 9">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 9</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142450.jpg" alt="Mebl / Pliš — kolekcija 9"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 9</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142458.jpg" alt="Mebl / Pliš — kolekcija 10">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 10</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142458.jpg" alt="Mebl / Pliš — kolekcija 10"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 10</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142509.jpg" alt="Mebl / Pliš — kolekcija 11">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 11</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142509.jpg" alt="Mebl / Pliš — kolekcija 11"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 11</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142519.jpg" alt="Mebl / Pliš — kolekcija 12">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 12</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142519.jpg" alt="Mebl / Pliš — kolekcija 12"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 12</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142526.jpg" alt="Mebl / Pliš — kolekcija 13">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 13</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142526.jpg" alt="Mebl / Pliš — kolekcija 13"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 13</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142532.jpg" alt="Mebl / Pliš — kolekcija 14">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 14</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142532.jpg" alt="Mebl / Pliš — kolekcija 14"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 14</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142538.jpg" alt="Mebl / Pliš — kolekcija 15">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 15</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142538.jpg" alt="Mebl / Pliš — kolekcija 15"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 15</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142546.jpg" alt="Mebl / Pliš — kolekcija 16">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 16</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142546.jpg" alt="Mebl / Pliš — kolekcija 16"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 16</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142552.jpg" alt="Mebl / Pliš — kolekcija 17">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 17</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142552.jpg" alt="Mebl / Pliš — kolekcija 17"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 17</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142559.jpg" alt="Mebl / Pliš — kolekcija 18">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 18</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142559.jpg" alt="Mebl / Pliš — kolekcija 18"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 18</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142607.jpg" alt="Mebl / Pliš — kolekcija 19">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 19</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142607.jpg" alt="Mebl / Pliš — kolekcija 19"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 19</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142619.jpg" alt="Mebl / Pliš — kolekcija 20">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 20</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142619.jpg" alt="Mebl / Pliš — kolekcija 20"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 20</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142625.jpg" alt="Mebl / Pliš — kolekcija 21">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 21</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142625.jpg" alt="Mebl / Pliš — kolekcija 21"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 21</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142634.jpg" alt="Mebl / Pliš — kolekcija 22">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 22</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142634.jpg" alt="Mebl / Pliš — kolekcija 22"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 22</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142641.jpg" alt="Mebl / Pliš — kolekcija 23">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 23</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142641.jpg" alt="Mebl / Pliš — kolekcija 23"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 23</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142647.jpg" alt="Mebl / Pliš — kolekcija 24">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 24</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142647.jpg" alt="Mebl / Pliš — kolekcija 24"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 24</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142654.jpg" alt="Mebl / Pliš — kolekcija 25">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 25</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142654.jpg" alt="Mebl / Pliš — kolekcija 25"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 25</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142659.jpg" alt="Mebl / Pliš — kolekcija 26">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 26</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142659.jpg" alt="Mebl / Pliš — kolekcija 26"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 26</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142713.jpg" alt="Mebl / Pliš — kolekcija 27">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 27</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142713.jpg" alt="Mebl / Pliš — kolekcija 27"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 27</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142729.jpg" alt="Mebl / Pliš — kolekcija 28">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 28</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142729.jpg" alt="Mebl / Pliš — kolekcija 28"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 28</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142735.jpg" alt="Mebl / Pliš — kolekcija 29">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 29</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142735.jpg" alt="Mebl / Pliš — kolekcija 29"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 29</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142741.jpg" alt="Mebl / Pliš — kolekcija 30">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 30</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142741.jpg" alt="Mebl / Pliš — kolekcija 30"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 30</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142758.jpg" alt="Mebl / Pliš — kolekcija 31">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 31</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142758.jpg" alt="Mebl / Pliš — kolekcija 31"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 31</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142806.jpg" alt="Mebl / Pliš — kolekcija 32">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 32</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142806.jpg" alt="Mebl / Pliš — kolekcija 32"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 32</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142819.jpg" alt="Mebl / Pliš — kolekcija 33">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 33</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142819.jpg" alt="Mebl / Pliš — kolekcija 33"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 33</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142826.jpg" alt="Mebl / Pliš — kolekcija 34">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 34</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142826.jpg" alt="Mebl / Pliš — kolekcija 34"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 34</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142831.jpg" alt="Mebl / Pliš — kolekcija 35">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 35</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142831.jpg" alt="Mebl / Pliš — kolekcija 35"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 35</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142838.jpg" alt="Mebl / Pliš — kolekcija 36">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 36</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142838.jpg" alt="Mebl / Pliš — kolekcija 36"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 36</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142845.jpg" alt="Mebl / Pliš — kolekcija 37">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 37</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142845.jpg" alt="Mebl / Pliš — kolekcija 37"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 37</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142905.jpg" alt="Mebl / Pliš — kolekcija 38">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 38</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142905.jpg" alt="Mebl / Pliš — kolekcija 38"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 38</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142913.jpg" alt="Mebl / Pliš — kolekcija 39">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 39</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142913.jpg" alt="Mebl / Pliš — kolekcija 39"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 39</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142919.jpg" alt="Mebl / Pliš — kolekcija 40">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 40</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142919.jpg" alt="Mebl / Pliš — kolekcija 40"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 40</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142927.jpg" alt="Mebl / Pliš — kolekcija 41">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 41</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142927.jpg" alt="Mebl / Pliš — kolekcija 41"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 41</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142933.jpg" alt="Mebl / Pliš — kolekcija 42">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 42</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142933.jpg" alt="Mebl / Pliš — kolekcija 42"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 42</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142941.jpg" alt="Mebl / Pliš — kolekcija 43">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 43</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142941.jpg" alt="Mebl / Pliš — kolekcija 43"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 43</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_142952.jpg" alt="Mebl / Pliš — kolekcija 44">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 44</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_142952.jpg" alt="Mebl / Pliš — kolekcija 44"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 44</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143002.jpg" alt="Mebl / Pliš — kolekcija 45">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 45</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143002.jpg" alt="Mebl / Pliš — kolekcija 45"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 45</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143032.jpg" alt="Mebl / Pliš — kolekcija 46">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 46</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143032.jpg" alt="Mebl / Pliš — kolekcija 46"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 46</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143039.jpg" alt="Mebl / Pliš — kolekcija 47">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 47</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143039.jpg" alt="Mebl / Pliš — kolekcija 47"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 47</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143045.jpg" alt="Mebl / Pliš — kolekcija 48">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 48</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143045.jpg" alt="Mebl / Pliš — kolekcija 48"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 48</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143055.jpg" alt="Mebl / Pliš — kolekcija 49">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 49</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143055.jpg" alt="Mebl / Pliš — kolekcija 49"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 49</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/20260402_143101.jpg" alt="Mebl / Pliš — kolekcija 50">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 50</span>
-            </div>
-          </article>
-
-          <!-- IMG- files — additional swatches -->
-          <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
-            <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/IMG-60a68008f231ff1099c330b968314317-V.jpg" alt="Mebl / Pliš — kolekcija 51">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 51</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143101.jpg" alt="Mebl / Pliš — kolekcija 50"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 50</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/IMG-aafe41613eb0578acf8863369dfb33c2-V.jpg" alt="Mebl / Pliš — kolekcija 52">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 52</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/IMG-60a68008f231ff1099c330b968314317-V.jpg" alt="Mebl / Pliš — kolekcija 51"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 51</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/IMG-f8e602eac0deab2bc00bc5b449b29c3a-V.jpg" alt="Mebl / Pliš — kolekcija 53">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 53</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/IMG-aafe41613eb0578acf8863369dfb33c2-V.jpg" alt="Mebl / Pliš — kolekcija 52"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 52</span></div>
           </article>
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch">
-              <img src="assets/assets/IMG-fb05462acd5f0501e4e338bd7a22afda-V.jpg" alt="Mebl / Pliš — kolekcija 54">
-            </div>
-            <div class="tray-label">
-              Mebl / Pliš
-              <span class="tray-label-sub">Kolekcija 54</span>
-            </div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/IMG-f8e602eac0deab2bc00bc5b449b29c3a-V.jpg" alt="Mebl / Pliš — kolekcija 53"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 53</span></div>
+          </article>
+
+          <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
+            <div class="tray-check">✓</div>
+            <div class="tray-img tray-img-swatch"><img src="assets/assets/IMG-fb05462acd5f0501e4e338bd7a22afda-V.jpg" alt="Mebl / Pliš — kolekcija 54"></div>
+            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 54</span></div>
           </article>
 
         </div>
-        <!-- end tray-3 materials -->
-
       </div>
     </section>
 
@@ -1463,7 +1143,11 @@
             <div class="contact-list">
               <div class="contact-item"><strong>Telefon</strong>+381 612695784<br>+381 604806777</div>
               <div class="contact-item"><strong>Instagram</strong>lipa_namestaj<br>lipa_separei</div>
-              <div class="contact-item"><strong>Gmail</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f21212624202326377a0f28222e2623612c2022">[email&#160;protected]</a><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c2826233e282629622225272320252f0c20253c2d3c2336292b2d623e3f">[email&#160;protected]</a></div>
+              <div class="contact-item">
+                <strong>Gmail</strong>
+                <a href="mailto:nnikolix5@gmail.com">nnikolix5@gmail.com</a><br>
+                <a href="mailto:djordje.nikolic@lipapozega.rs">djordje.nikolic@lipapozega.rs</a>
+              </div>
               <div class="contact-item"><strong>Adresa</strong>Godovički Put 66, Požega 31210</div>
             </div>
           </div>
@@ -1497,19 +1181,16 @@
   </div>
 
   <script>
-    // Lightbox for material swatches
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
 
     document.querySelectorAll('.tray-card.selectable').forEach(card => {
-      // Add zoom hint
       const hint = document.createElement('span');
       hint.className = 'zoom-hint';
       hint.textContent = '🔍 Prikaži celu sliku';
       card.querySelector('.tray-img').appendChild(hint);
 
-      // Click opens lightbox
       card.addEventListener('click', () => {
         const img = card.querySelector('.tray-img img');
         lightboxImg.src = img.src;
@@ -1522,13 +1203,11 @@
       });
     });
 
-    // Close lightbox
     lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
     lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') lightbox.classList.remove('open');
     });
-
   </script>
 </body>
 </html>
