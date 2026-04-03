@@ -103,7 +103,7 @@
     }
     .brand{ display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .brand img{
-      width:52px; height:52px; object-fit:contain; border-radius:10px;
+      width:120px; height:120px; object-fit:contain; border-radius:10px;
       background:rgba(255,255,255,.04); padding:6px; border:1px solid var(--line);
     }
     .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
@@ -422,7 +422,7 @@
     }
     @media (max-width:520px){
       .tray-4, .tray-3, .tray-2{ grid-template-columns:1fr; }
-      .brand img{ width:44px; height:44px; }
+      .brand img{ width:88px; height:88px; }
       .menu a{ padding:7px 10px; font-size:.78rem; }
       .footer-card, .contact-card{ padding:16px 18px; }
     }
@@ -1052,12 +1052,6 @@
 
           <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
             <div class="tray-check">✓</div>
-            <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143002.jpg" alt="Mebl / Pliš — kolekcija 45"></div>
-            <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 45</span></div>
-          </article>
-
-          <article class="tray-card selectable" tabindex="0" role="button" aria-pressed="false">
-            <div class="tray-check">✓</div>
             <div class="tray-img tray-img-swatch"><img src="assets/assets/20260402_143032.jpg" alt="Mebl / Pliš — kolekcija 46"></div>
             <div class="tray-label">Mebl / Pliš<span class="tray-label-sub">Kolekcija 46</span></div>
           </article>
@@ -1192,7 +1186,7 @@
     <img id="lightboxImg" src="" alt="">
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
