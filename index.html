@@ -1151,8 +1151,8 @@
               <div class="contact-item"><strong>Instagram</strong>lipa_namestaj<br>lipa_separei</div>
               <div class="contact-item">
                 <strong>Gmail</strong>
-                <a href="/cdn-cgi/l/email-protection#234d4d4a484c4f4a5b1663444e424a4f0d404c4e"><span class="__cf_email__" data-cfemail="5d3333343632313425681d3a303c3431733e3230">[email&#160;protected]</span></a><br>
-                <a href="/cdn-cgi/l/email-protection#bdd9d7d2cfd9d7d893d3d4d6d2d1d4defdd1d4cddccdd2c7d8dadc93cfce"><span class="__cf_email__" data-cfemail="7f1b15100d1b151a511116141013161c3f13160f1e0f10051a181e510d0c">[email&#160;protected]</span></a>
+                <span id="em1"></span><br>
+                <span id="em2"></span>
               </div>
               <div class="contact-item"><strong>Adresa</strong>Godovički Put 66, Požega 31210</div>
             </div>
@@ -1187,22 +1187,44 @@
   </div>
 
   <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
+    // Inject emails via JS to prevent Cloudflare obfuscation
+    (function() {
+      var e1 = ['nnikolix5', 'gmail.com'].join('@');
+      var e2 = ['djordje.nikolic', 'lipapozega.rs'].join('@');
+      var s1 = document.getElementById('em1');
+      var s2 = document.getElementById('em2');
+      if (s1) { s1.innerHTML = '<a href="mailto:' + e1 + '" style="color:var(--muted)">' + e1 + '</a>'; }
+      if (s2) { s2.innerHTML = '<a href="mailto:' + e2 + '" style="color:var(--muted)">' + e2 + '</a>'; }
+    })();
 
-    document.querySelectorAll('.tray-card.selectable').forEach(card => {
-      const hint = document.createElement('span');
+    // Lightbox for material swatches
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.tray-card.selectable').forEach(function(card) {
+      var hint = document.createElement('span');
       hint.className = 'zoom-hint';
-      hint.textContent = '🔍 Prikaži celu sliku';
+      hint.textContent = '\uD83D\uDD0D Prika\u017Ei celu sliku';
       card.querySelector('.tray-img').appendChild(hint);
 
-      card.addEventListener('click', () => {
-        const img = card.querySelector('.tray-img img');
+      card.addEventListener('click', function() {
+        var img = card.querySelector('.tray-img img');
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
         lightbox.classList.add('open');
       });
 
-      card.addEventListener('keydown', e => {
-        if (e.key === '
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+      });
+    });
+
+    lightbox.addEventListener('click', function() { lightbox.classList.remove('open'); });
+    lightboxClose.addEventListener('click', function() { lightbox.classList.remove('open'); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
