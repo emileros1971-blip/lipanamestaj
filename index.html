@@ -580,7 +580,6 @@
             <div class="tray-label"><span class="tray-badge">Stolica</span>Atina L</div>
           </article>
 
-          <!-- ═══ NOVI MODELI STOLICA ═══ -->
           <article class="tray-card">
             <div class="tray-img"><img src="assets/assets/37241669-f6ac-410d-92ab-4a3b7d251fce.png" alt="Heba"></div>
             <div class="tray-label"><span class="tray-badge">Stolica</span>Heba</div>
@@ -662,7 +661,6 @@
         </div>
         <div class="interior-tray">
 
-          <!-- Enterijer 3,4,5,7 ostaju (1,2,6,8,9,10 → separei; 11 → krevet izbačen) -->
           <article class="tray-card selectable" tabindex="0" role="button">
             <div class="tray-check">✓</div>
             <div class="tray-img tray-img-wide"><img src="assets/assets/IMG-7374b9e3e42c3fe5ab3e4e03d60ee631-V.jpg" alt="Enterijer 1"></div>
@@ -791,6 +789,11 @@
             <div class="tray-check">✓</div>
             <div class="tray-img tray-img-wide"><img src="assets/assets/0-02-05-5181dc20ee770f46ea086c00a0a3ba769fde658d9091fc8a114ffd211a2c16b2_f4cc6b1dd3b7f14b.jpg" alt="Separe 8"></div>
             <div class="tray-label">Separe 8</div>
+          </article>
+          <article class="tray-card selectable" tabindex="0" role="button">
+            <div class="tray-check">✓</div>
+            <div class="tray-img tray-img-wide"><img src="assets/assets/viber_image_2026-04-03_20-21-01-974.jpg" alt="Separe 9"></div>
+            <div class="tray-label">Separe 9</div>
           </article>
 
         </div>
@@ -1225,7 +1228,6 @@
   </div>
 
   <script>
-    // Inject emails via JS to prevent Cloudflare obfuscation
     (function() {
       var e1 = ['nnikolix5', 'gmail.com'].join('@');
       var e2 = ['djordje.nikolic', 'lipapozega.rs'].join('@');
@@ -1235,7 +1237,6 @@
       if (s2) { s2.innerHTML = '<a href="mailto:' + e2 + '" style="color:var(--muted)">' + e2 + '</a>'; }
     })();
 
-    // Lightbox for material swatches
     var lightbox = document.getElementById('lightbox');
     var lightboxImg = document.getElementById('lightboxImg');
     var lightboxClose = document.getElementById('lightboxClose');
@@ -1243,7 +1244,7 @@
     document.querySelectorAll('.tray-card.selectable').forEach(function(card) {
       var hint = document.createElement('span');
       hint.className = 'zoom-hint';
-      hint.textContent = '\uD83D\uDD0D Prika\u017Ei celu sliku';
+      hint.textContent = '\uD83D\uDD0D Prikaži celu sliku';
       card.querySelector('.tray-img').appendChild(hint);
 
       card.addEventListener('click', function() {
